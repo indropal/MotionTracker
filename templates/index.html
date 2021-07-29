@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <title>Motion Heatmap</title>
+        <meta charset="utf-8">
+        <script>
+            alert("This page requires access to the device's camera.\nIn order to proceed, you agree to provide access to your device's camera stream.");
+        </script>            
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div style="text-align: center; width: 60%; height: 60%; margin: auto;">
+                    <h2>Motion Tracking</h2>
+                    <p style='font-size: 14px;'>
+                        <em>
+                            The following page renders the camera stream and detects motion / changes in subsequent captured image frames.<br>
+                            The changes are represented as motion heatmap overlayed on top of rendered images. The heatmap refreshes every 10 seconds.
+                        </em>
+                    </p>
+                    
+                    <img src="{{ url_for('camera_capture') }}" width="90%">
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
